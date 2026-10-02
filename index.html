@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sifiso Wayne Moyo — Full-stack JavaScript developer</title>
+    <meta
+      name="description"
+      content="Sifiso Wayne Moyo builds full-stack web apps with React, Express, PostgreSQL and Prisma."
+    />
+    <meta name="author" content="Sifiso Wayne Moyo" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
+    />
+    <script>
+      // Apply the saved theme before first paint so the page never flashes the wrong colours.
+      (function () {
+        var root = document.documentElement;
+        var mode = "system";
+        var accent = "coral";
+        try {
+          mode = localStorage.getItem("theme-mode") || mode;
+          accent = localStorage.getItem("theme-accent") || accent;
+        } catch (e) {}
+        var dark =
+          mode === "dark" ||
+          (mode === "system" && matchMedia("(prefers-color-scheme: dark)").matches);
+        root.dataset.theme = dark ? "dark" : "light";
+        root.dataset.accent = accent;
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
