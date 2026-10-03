@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found — Sifiso Wayne Moyo</title>
+    <!-- Keep this page out of search results -->
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Use the theme the visitor picked on the main site (saved by useTheme), else follow the system.
+      (function () {
+        var mode = "system";
+        try {
+          mode = localStorage.getItem("theme-mode") || mode;
+        } catch (e) {}
+        var dark =
+          mode === "dark" ||
+          (mode === "system" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+      })();
+    </script>
+    <style>
+      /* Standalone styles (no React or Vite) so this page loads instantly */
+      :root {
+        --bg: #f6f6f3;
+        --text: #121211;
+        --text-muted: #5b5a55;
+        --accent: #cc3d1d;
+        --on-accent: #ffffff;
+        color-scheme: light;
+      }
+
+      :root[data-theme="dark"] {
+        --bg: #0a0a0b;
+        --text: #f3f2ef;
+        --text-muted: #a5a39d;
+        --accent: #ff7a59;
+        --on-accent: #0a0a0b;
+        color-scheme: dark;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 1.5rem;
+        box-sizing: border-box;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        text-align: center;
+      }
+
+      .code {
+        margin: 0;
+        font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+        font-size: 0.85rem;
+        letter-spacing: 0.08em;
+        color: var(--accent);
+      }
+
+      h1 {
+        margin: 0.75rem 0 1rem;
+        font-size: clamp(2rem, 7vw, 3.5rem);
+        letter-spacing: -0.04em;
+        line-height: 1.05;
+      }
+
+      p {
+        max-width: 28rem;
+        margin: 0 auto 2rem;
+        color: var(--text-muted);
+      }
+
+      a {
+        display: inline-block;
+        padding: 0.85rem 1.4rem;
+        border-radius: 999px;
+        background: var(--accent);
+        color: var(--on-accent);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="code">404 · NOT FOUND</p>
+      <h1>This page doesn't exist.</h1>
+      <p>The link may be old or mistyped. Everything on this site lives on the homepage.</p>
+      <a href="/">Back to the homepage</a>
+    </main>
+  </body>
+</html>
