@@ -854,6 +854,41 @@ h2 {
 }
 
 /* ============ About ============ */
+/* Photo on the left, text on the right; stacks on narrow screens */
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.portrait {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  box-shadow: var(--shadow);
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+@media (max-width: 48rem) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait {
+    max-width: 16rem;
+  }
+}
+
 .about {
   max-width: 46rem;
   font-size: clamp(1.15rem, 2vw, 1.4rem);

@@ -7,6 +7,10 @@ export const profile = {
   status: "Open to junior roles",
   github: "https://github.com/Westruva",
   githubHandle: "Westruva",
+  portrait: {
+    src: "/portrait.webp",
+    alt: "Portrait of Sifiso Wayne Moyo wearing a grey zip-up jacket, against a white background.",
+  },
 };
 
 // Order here is the order the buttons appear in Contact and the footer.
