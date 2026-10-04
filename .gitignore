@@ -144,3 +144,6 @@ vite.config.ts.timestamp-*
 
 # Original screenshots (contain unredacted personal details) — kept local only
 design/
+
+# Temporary server build used by scripts/prerender.js
+dist-ssr/

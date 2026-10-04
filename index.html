@@ -11,6 +11,48 @@
     <meta name="author" content="Sifiso Wayne Moyo" />
     <!-- Tells search engines this is the one official address of the page (not http:// or other copies). -->
     <link rel="canonical" href="https://sifisowmoyo.com/" />
+    <!-- Link previews: what LinkedIn, WhatsApp, Facebook etc. show when the site is shared.
+         Image URLs must be absolute. The banner's source is design/og-banner.html. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sifiso Wayne Moyo" />
+    <meta property="og:url" content="https://sifisowmoyo.com/" />
+    <meta property="og:title" content="Sifiso Wayne Moyo — Full-stack JavaScript developer" />
+    <meta
+      property="og:description"
+      content="Sifiso Wayne Moyo builds full-stack web apps with React, Express, PostgreSQL and Prisma."
+    />
+    <meta property="og:image" content="https://sifisowmoyo.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Banner reading Sifiso Wayne Moyo, Full-stack JavaScript developer, beside a portrait of Sifiso."
+    />
+    <!-- X (Twitter) reads the og: tags above; this asks it for the large image card. -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Structured data (schema.org "Person"): tells Google who this site is about and which
+         profiles elsewhere belong to the same person, so they can be linked in name searches.
+         Keep sameAs in sync with the socials list in src/data/content.js. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sifiso Wayne Moyo",
+        "givenName": "Sifiso",
+        "additionalName": "Wayne",
+        "familyName": "Moyo",
+        "jobTitle": "Full-stack JavaScript developer",
+        "description": "Sifiso Wayne Moyo builds full-stack web apps with React, Express, PostgreSQL and Prisma.",
+        "url": "https://sifisowmoyo.com/",
+        "image": "https://sifisowmoyo.com/portrait.webp",
+        "knowsAbout": ["JavaScript", "React", "Node.js", "Express", "PostgreSQL", "Prisma"],
+        "sameAs": [
+          "https://github.com/Westruva",
+          "https://www.linkedin.com/in/sifiso-moyo-930b43221",
+          "https://x.com/Jack72684331"
+        ]
+      }
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,6 +75,8 @@
           (mode === "system" && matchMedia("(prefers-color-scheme: dark)").matches);
         root.dataset.theme = dark ? "dark" : "light";
         root.dataset.accent = accent;
+        // Lets CSS hide fade-in sections only when JavaScript can reveal them again.
+        root.classList.add("js");
       })();
     </script>
   </head>

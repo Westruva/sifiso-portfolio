@@ -15,6 +15,16 @@ npm run dev
 
 The site runs at `http://localhost:5173`. Use `npm run build` for a production build in `dist/` and `npm run lint` to check the code.
 
+### How the build works
+
+The page is pre-rendered, so the HTML Cloudflare serves already contains all the text. Search engines and link previews can read it without running JavaScript. `npm run build` runs three steps:
+
+1. `vite build`: the normal browser build in `dist/`
+2. `vite build --ssr src/entry-server.jsx --outDir dist-ssr`: a temporary Node build of the app
+3. `node scripts/prerender.js`: renders the app to HTML, puts it inside `<div id="root">` in `dist/index.html`, then deletes `dist-ssr/`
+
+In the browser, `src/main.jsx` attaches React to that HTML with `hydrateRoot`. Anything a component renders must therefore be the same at build time as on a visitor's first render. Read browser-only state, such as `localStorage`, in effects or in UI that only appears after interaction (like the theme panel).
+
 ## Project structure
 
 - `src/data/content.js`: all copy, projects and links. Edit this file to update the site.
@@ -23,6 +33,8 @@ The site runs at `http://localhost:5173`. Use `npm run build` for a production b
 - `src/hooks/useReveal.js`: fades sections in as they scroll into view
 - `src/index.css`: theme tokens and all styles
 - `index.html`: applies the saved theme before the page first renders, so it never flashes the wrong colours
+- `src/entry-server.jsx`, `scripts/prerender.js`: build-time pre-rendering (see above)
+- `wrangler.jsonc`: Cloudflare Worker config. Serves `dist/` and returns `404.html` for unknown URLs.
 
 ## Updating
 

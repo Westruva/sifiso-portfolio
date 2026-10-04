@@ -28,7 +28,8 @@ function App() {
         <Contact />
       </main>
       <footer className="site-footer container">
-        <p>
+        {/* Pre-rendered at build time; the year may change before the next build */}
+        <p suppressHydrationWarning>
           © {new Date().getFullYear()} {profile.fullName}
         </p>
         <ul className="footer-socials">
