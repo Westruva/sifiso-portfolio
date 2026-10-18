@@ -1,5 +1,5 @@
 import SocialIcon from "./SocialIcon";
-import { socials } from "../data/content";
+import { profile, socials } from "../data/content";
 
 function Contact() {
   return (
@@ -8,8 +8,12 @@ function Contact() {
         <p className="label">04 · Contact</p>
         <h2 id="contact-heading">Let's build something.</h2>
         <p>
-          I'm open to junior developer roles, internships and collaborations. Message me on
-          LinkedIn or WhatsApp, or browse my code on GitHub.
+          For projects, collaborations or questions, reach me on LinkedIn or WhatsApp. You can
+          also learn more about my company at{" "}
+          <a href={profile.company.href} target="_blank" rel="noopener noreferrer">
+            westruva.com
+          </a>
+          , or browse my code on GitHub.
         </p>
         <ul className="social-links">
           {socials.map((social) => (

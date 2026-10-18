@@ -1104,3 +1104,10 @@ h2 {
     transform: none;
   }
 }
+
+/* Company link inside the hero role line */
+.hero-role a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

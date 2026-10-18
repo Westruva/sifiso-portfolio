@@ -30,7 +30,10 @@ function App() {
       <footer className="site-footer container">
         {/* Pre-rendered at build time; the year may change before the next build */}
         <p suppressHydrationWarning>
-          © {new Date().getFullYear()} {profile.fullName}
+          © {new Date().getFullYear()} {profile.fullName} ·{" "}
+          <a href={profile.company.href} target="_blank" rel="noopener noreferrer">
+            {profile.company.name}
+          </a>
         </p>
         <ul className="footer-socials">
           {socials.map((social) => (

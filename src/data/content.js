@@ -4,7 +4,7 @@ export const profile = {
   name: "Sifiso",
   fullName: "Sifiso Wayne Moyo",
   role: "Full-stack JavaScript developer",
-  status: "Open to junior roles",
+  company: { name: "Westruva", href: "https://westruva.com" },
   github: "https://github.com/Westruva",
   githubHandle: "Westruva",
   portrait: {
@@ -176,6 +176,6 @@ export const toolbox = [
 ];
 
 export const about = [
-  "I'm a self-taught developer working through the full-stack JavaScript path of The Odin Project. I started with a sign-up form and a rock-paper-scissors game. Now I build and deploy apps with a separate API, a real database and more than one client.",
-  "What I enjoy most is the part people don't see: validating input on the server, modelling data so it stays consistent, and writing a README that lets someone else run my project in five minutes.",
+  "I'm Sifiso, a full-stack JavaScript developer and the founder of Westruva. I design and build web applications end to end: a React front end, an Express API and a PostgreSQL database managed with Prisma, deployed to production.",
+  "I care most about the parts users never see: validating input on the server, modelling data so it stays consistent, and documenting a project so someone else can run it in five minutes. My training has been the full-stack JavaScript path of The Odin Project, and every project here is built and deployed from scratch.",
 ];
