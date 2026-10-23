@@ -3,7 +3,7 @@
 export const profile = {
   name: "Sifiso",
   fullName: "Sifiso Wayne Moyo",
-  role: "Full-stack JavaScript developer",
+  role: "Full-stack developer · Offline-first systems",
   company: { name: "Westruva", href: "https://westruva.com" },
   github: "https://github.com/Westruva",
   githubHandle: "Westruva",
@@ -22,6 +22,25 @@ export const socials = [
 ];
 
 export const featuredProjects = [
+  {
+    title: "Westruva",
+    kicker: "My company · WiFi monetisation",
+    description:
+      "A captive-portal WiFi platform sold to hotspot operators. Customers pay with EcoCash through Paynow or redeem a voucher, and operators get a dashboard with accounting, automated billing and one-paste router setup. Live with IT Republic, 939, Ncube WiFi and Inkora.",
+    snippet: "phone → EcoCash → Paynow webhook → RADIUS → online",
+    tags: ["Express", "PostgreSQL", "FreeRADIUS", "Paynow / EcoCash", "WireGuard", "PWA"],
+    links: [
+      { label: "Visit Westruva", href: "https://westruva.com" },
+      { label: "Live portal", href: "https://portal.westruva.com" },
+    ],
+    image: {
+      src: "/westruva-logo.webp",
+      alt: "Westruva logo: a gold crown-shaped letter W on a black background. Links to westruva.com.",
+      href: "https://westruva.com",
+      fit: "contain",
+    },
+    size: "full",
+  },
   {
     title: "Where's Rick?",
     kicker: "Full-stack game",
@@ -161,6 +180,7 @@ export const moreProjects = [
 ];
 
 export const recentlyShipped = [
+  { date: "2026-10", label: "Oct 2026", text: "Westruva WiFi Portal" },
   { date: "2026-10", label: "Oct 2026", text: "Margin Journal" },
   { date: "2026-10", label: "Oct 2026", text: "The Backpack" },
   { date: "2026-09", label: "Sep 2026", text: "Where's Rick?" },
@@ -172,10 +192,11 @@ export const toolbox = [
   { group: "Frontend", items: ["React", "React Router", "Vite", "webpack", "Tailwind CSS", "HTML", "CSS"] },
   { group: "Backend", items: ["Node.js", "Express", "EJS", "REST APIs", "JWT auth"] },
   { group: "Data", items: ["PostgreSQL", "Prisma ORM", "SQL"] },
-  { group: "Shipping", items: ["Git & GitHub", "Netlify", "Railway"] },
+  { group: "Shipping", items: ["Git & GitHub", "Netlify", "Railway", "VPS"] },
 ];
 
 export const about = [
-  "I'm Sifiso, a full-stack JavaScript developer and the founder of Westruva. I design and build web applications end to end: a React front end, an Express API and a PostgreSQL database managed with Prisma, deployed to production.",
-  "I care most about the parts users never see: validating input on the server, modelling data so it stays consistent, and documenting a project so someone else can run it in five minutes. My training has been the full-stack JavaScript path of The Odin Project, and every project here is built and deployed from scratch.",
+  "I'm Sifiso, a full-stack JavaScript developer and the founder of Westruva. Westruva builds resilient software for local infrastructure: offline-first web and mobile apps, local payments like EcoCash, and backends that keep working when connectivity or network APIs drop. Our WiFi portal already runs for IT Republic, 939, Ncube WiFi and Inkora.",
+  "Day to day I work end to end: a React front end, an Express API and a PostgreSQL database managed with Prisma, deployed to production. I care most about the parts users never see: validating input on the server, modelling data so it stays consistent, and documenting a project so someone else can run it in five minutes.",
+  "My training has been the full-stack JavaScript path of The Odin Project, and every project here is built and deployed from scratch.",
 ];

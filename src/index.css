@@ -633,7 +633,12 @@ h2 {
     grid-column: span 4;
   }
 
-  .project-wide h3 {
+  .project-full {
+    grid-column: span 6;
+  }
+
+  .project-wide h3,
+  .project-full h3 {
     font-size: 2.4rem;
   }
 }
@@ -700,6 +705,27 @@ h2 {
 
 .project-half .project-shot {
   aspect-ratio: 2 / 1;
+}
+
+/* Logo (e.g. Westruva): shown whole on black, centred, and clickable */
+.project-shot-logo {
+  background: #0d0d0d;
+}
+
+.project-shot-logo a {
+  display: block;
+  height: 100%;
+}
+
+.project-shot-logo img {
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (min-width: 60rem) {
+  .project-full .project-shot {
+    aspect-ratio: 3.2 / 1;
+  }
 }
 
 /* Wider, shorter crop so the featured card doesn't tower over its neighbour */

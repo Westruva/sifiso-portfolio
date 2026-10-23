@@ -17,8 +17,10 @@ function Hero() {
           Full-stack web applications, <span className="gradient-text">built to last.</span>
         </h1>
         <p className="lede">
-          I build with React, Express, PostgreSQL and Prisma. My apps keep decisions on the
-          server, use clear data models and have interfaces that stay out of the way.
+          I design and deploy resilient, high-speed software built for local infrastructure.
+          Offline-first web and mobile architecture, local payment integrations like EcoCash and
+          optimized backend routing turn technical friction into simple, production-ready systems
+          that keep working when connectivity or network APIs drop.
         </p>
         <div className="cta-row">
           <a className="btn btn-primary" href="#work">

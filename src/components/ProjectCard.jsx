@@ -8,11 +8,31 @@ function ProjectCard({ project }) {
 
   const sizeClass = project.size ? ` project-${project.size}` : "";
 
+  const { image } = project;
+  const shot = image && (
+    <img
+      src={image.src}
+      alt={image.alt}
+      width="1280"
+      height="620"
+      loading="lazy"
+      decoding="async"
+    />
+  );
+
   return (
     <article className={`project card${sizeClass}`} onPointerMove={handlePointerMove} data-reveal>
-      {project.image && (
-        <div className="project-shot">
-          <img src={project.image.src} alt={project.image.alt} width="1280" height="620" loading="lazy" decoding="async" />
+      {image && (
+        // image.fit "contain" shows a logo whole instead of cropping it like a screenshot.
+        // image.href makes the whole image a link.
+        <div className={`project-shot${image.fit === "contain" ? " project-shot-logo" : ""}`}>
+          {image.href ? (
+            <a href={image.href} target="_blank" rel="noopener noreferrer">
+              {shot}
+            </a>
+          ) : (
+            shot
+          )}
         </div>
       )}
       <div>
